@@ -12,15 +12,38 @@ public class Anna extends Human {
         super(name, age, weight);
         this.height = height;
     }
-    public int eat (int weight) {
-        weight = weight + 2;
-      return Log.d("Anna","I am eating food" + weight + "Kgs");
 
+    public int getHeight() {
+        return height;
     }
-    public int birhday (int age){
-        age = age + 4;
-        return age;
+
+    public void setHeight(int height) {
+        this.height = height;
     }
+
+    @Override
+    public void eat() {
+        super.eat();
+        int annaWeight=getWeight();
+        annaWeight=annaWeight+2;
+        setWeight(annaWeight);
+    }
+
+    @Override
+    public void birhday() {
+        int annaAge=getAge();
+        annaAge=annaAge+4;
+        setAge(annaAge);
+    }
+    //  public int eat (int weight) {
+     //   weight = weight + 2;
+    //  return Log.d("Anna","I am eating food" + weight + "Kgs");
+
+   // }
+    //public int birhday (int age){
+    //    age = age + 4;
+     //   return age;
+   //  }
 
 
 

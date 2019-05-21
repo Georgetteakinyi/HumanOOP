@@ -48,9 +48,16 @@ public class Human {
     public  void speak(String speech){
         Log.d("Human",speech);
     }
-    public int birhday (int increament){
-        age=age+increament;
-        return age;
+    public void birhday (){
+      int  age = getAge();
+      age = age + 1;
+      setAge(age);
+
+
+
+
+
+
     }
 
 
